@@ -1,0 +1,40 @@
+.exhausting-page {
+  background-image: url("owl.gif");
+  background-color: navy;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: aliceblue;
+  width: 100vw;
+  height: 100vh;
+}
+
+.exhausting-page h1 {
+  font-size: 72px;
+}
+
+.exhausting-page p {
+  font-size: 24px;
+}
+
+.exhausting-page .exhausting-image {
+  position: absolute;
+  animation: gocrazy 2s infinite;
+}
+
+@keyframes gocrazy {
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  50% {
+    top: 80vh;
+    left: 30vw;
+    transform: rotate(180deg);
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
