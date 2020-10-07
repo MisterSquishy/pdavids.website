@@ -1,16 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Typist from 'react-typist';
 import Confetti from 'react-confetti'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Image from 'react-bootstrap/Image'
 import Row from 'react-bootstrap/Row'
+import axios from 'axios'
 
 import './style.css'
 
 export default ({
   onDone
 }) => {
+
+  const [ latestXkcd, setLatestXkcd ] = useState('')
+
+  useEffect(() => {
+    axios.get('https://xkcd.now.sh/?comic=latest').then(({ data }) => {
+      debugger
+      setLatestXkcd(data.img)
+    })
+  }, [])
+
   return <div className='exhausting-page'>
     <link
       rel="stylesheet"
@@ -57,6 +68,7 @@ export default ({
             src={`${window.location.origin}/penguin-icon.png`}
             width={250}
             className="exhausting-image" />
+          { latestXkcd && <Image src={ latestXkcd } /> }
         </Col>
       </Row>
     </Container>

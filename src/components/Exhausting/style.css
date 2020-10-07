@@ -1,7 +1,5 @@
 .exhausting-page {
-  background-image: url("owl.gif");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
   color: aliceblue;
   width: 100vw;
   height: 100vh;
@@ -26,10 +24,22 @@
     left: 0;
   }
 
-  50% {
+  25% {
     top: 80vh;
     left: 30vw;
     transform: rotate(180deg);
+  }
+
+  50% {
+    top: 80vh;
+    left: 0;
+    transform: rotate(360deg);
+  }
+
+  75% {
+    top: 0;
+    left: 30vw;
+    transform: none;
   }
 
   100% {
