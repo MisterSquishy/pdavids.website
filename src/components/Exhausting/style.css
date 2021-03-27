@@ -39,12 +39,12 @@
   75% {
     top: 0;
     left: 30vw;
-    transform: none;
+    transform: rotate(540deg);
   }
 
   100% {
     top: 0;
     left: 0;
-    transform: rotate(360deg);
+    transform: rotate(720deg);
   }
 }
